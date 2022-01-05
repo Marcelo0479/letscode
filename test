@@ -1,0 +1,99 @@
+1. Faça um programa que peça um valor monetário e diminua-o em 15%. Seu
+programa deve imprimir a mensagem “O novo valor é [valor]”
+
+valor = float(input('Digite o valor:' ))
+
+print("Percentual a ser deduzido do valor: 15%")
+percentual = 15/100
+valor_descontado = valor - valor * percentual
+print(f'O novo valor é: {valor_descontado}')
+
+2. Faça um programa que leia a validade das informações:
+
+
+> a. Idade: entre 0 e 150;
+
+> b. Salário: maior que 0;
+
+> c. Sexo: M, F ou Outro;
+
+> O programa deve imprimir uma mensagem de erro para cada informação
+inválida.
+
+idade = int(input('Digite sua idade: '))
+if idade >= 0 and idade <= 150:
+  print(f'Sua idade é {idade} anos')
+else:
+  print(f'{idade} não é um valor válido')
+
+salario = int(input('Digite seu salário: '))
+if salario > 0:
+  print(f'Seu salário é de R${salario}')
+else:
+  print(f'R${salario} não é um valor válido')
+
+genero = input('Digite seu genero, m, f ou outro: ').lower()
+genero
+if genero == 'm':
+  print(f'Seu genero é masculino')
+elif genero == 'f':
+  print(f'Seu genero é feminimo')
+elif genero == 'outro':
+  print(f'Seu genero é outro')
+
+
+3. Vamos fazer um programa para verificar quem é o assassino de um crime.
+Para descobrir o assassino, a polícia faz um pequeno questionário com 5
+perguntas onde a resposta só pode ser sim ou não:
+
+> a. Mora perto da vítima?
+
+> b. Já trabalhou com a vítima?
+
+> c. Telefonou para a vítima?
+
+> d. Esteve no local do crime?
+
+> e. Devia para a vítima?
+
+> Cada resposta sim dá um ponto para o suspeito. A polícia considera que os
+suspeitos com 5 pontos são os assassinos, com 4 a 3 pontos são cúmplices e
+2 pontos são apenas suspeitos, necessitando outras investigações. Valores
+iguais ou abaixo de 1 são liberados
+
+pontuacao = 0
+print('Questionário polícial')
+mora_perto = input('Primeira pergunta: Você mora perto da vítima? ')
+if mora_perto == 'sim':
+  pontuacao += 1
+trabalhou_com = input('Segunda pergunta: Você já trabalhou com a vítima? ')
+if trabalhou_com == 'sim':
+  pontuacao += 1
+telefonou_recentemente = input('Terceira pergunta: Você telefonou recentemente para a vítima? ')
+if telefonou_recentemente == 'sim':
+  pontuacao += 1
+esteve_local_crime = input('Quarta pergunta: Você esteve recentemente no local do crime? ')
+if esteve_local_crime == 'sim':
+  pontuacao += 1
+devia_vitima = input('Quinta pergunta: Você devia para a vítima? ')
+if devia_vitima == 'sim':
+  pontuacao += 1
+
+if pontuacao == 5:
+  print('Você está preso por assassinato.')
+elif pontuacao == 4 or pontuacao == 3:
+  print('Você está preso por ser cúmplice em assassinato.')
+elif pontuacao == 2:
+  print('Você está dedito por ser suspeito no assassinato.')
+else:
+  print('Você está liberado.ddfa')
+
+
+
+4. Faça um programa que imprima a tabuada do 9 (de 9 x 1 a 9 x 10) usando loops
+
+for i in range(1,11):
+  multplicador = i
+  i *= 9
+  print(f'9 x {multplicador} = {i}')
+
